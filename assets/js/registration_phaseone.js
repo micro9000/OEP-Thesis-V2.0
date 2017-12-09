@@ -184,6 +184,7 @@ $(".clientPassword, .clientConfirmPassword").on("focus", function(){
 
 //end HERE
 
+
 function clearRegInputs(){
 	$(".clientEmail").val("");
 	$(".clientFullName").val("");

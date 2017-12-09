@@ -56,79 +56,79 @@ function getFormData(){
 
 	var inqEmail = $(".inqEmail").val();
 	if (inqEmail == ""){
-		alert("Email is required");
+		$(".contactErrMsg").html("Email is required");
 		return false;
 	}else{
 		if (validateEmail(inqEmail) == false){
-			alert("Invalid Email");
+			$(".contactErrMsg").html("Invalid Email");
 			return false;
 		}
 	}
 
 	var inqName = $(".inqName").val()
 	if (inqName == ""){
-		alert("Fullname is required");
+		$(".contactErrMsg").html("Fullname is required");
 		return false;
 	}else{
-		
+
 		if (allLetter(inqName) === false){
-			alert("Invalid fullname");
+			$(".contactErrMsg").html("Invalid Full name - at least 2 to 3 word name start with uppercase letter ex: Johnny Depp or Kyrie Andrew Irving");
 			return false;
 		}
-		
+
 		var nameLen = inqName.length;
-		
+
 		if (nameLen < 4){
-			alert("Invalid fullname");
+			$(".contactErrMsg").html("Invalid fullname");
 			return false;
 		}
-		
+
 	}
 
 	var inqContactNum = $(".inqContactNum").val()
 	if (inqContactNum == ""){
-		alert("Contact Number is required");
+		$(".contactErrMsg").html("Contact Number is required");
 		return false;
 	}else{
 		if (mobileNum(inqContactNum) === false){
-			alert("Invalid Contact No");
+			$(".contactErrMsg").html("Invalid Contact No, please follow this format (+63 or 0 + ten numbers)");
 			return false;
 		}
 	}
 
 	var inqEvent = $(".inqEvent").val()
 	if (inqEvent == ""){
-		alert("Type of Event is required");
+		$(".contactErrMsg").html("Type of Event is required");
 		return false;
 	}
 
 	var inqVenue = $(".inqVenue").val()
 	if (inqVenue == ""){
-		alert("Type of Venue is required");
+		$(".contactErrMsg").html("Type of Venue is required");
 		return false;
 	}
-	
+
 	var venueID = $(".inqVenue").children(":selected").attr("id");
-	
+
 	var outsideVenueAddress = $(".outsideVenueAddress").val();
 	if (outsideVenueAddress == ""){
 		outsideVenueAddress = "none";
 	}
-	
+
 	var noOfGuest = $(".inqnoOfGuest").val();
 	if (noOfGuest == ""){
-		alert("No of guests is required");
+		$(".contactErrMsg").html("No of guests is required");
 		return false;
 	}else{
 		if (allNumeric(noOfGuest) === false){
-			alert("invalid no of guests");
+			$(".contactErrMsg").html("Invalid no of guests");
 			return false;
 		}
 	}
 
 	var inqInquiry = $(".inqInquiry").val()
 	if (inqInquiry == ""){
-		alert("Inquiry is required");
+		$(".contactErrMsg").html("Inquiry is required");
 		return false;
 	}
 
@@ -147,9 +147,67 @@ function getFormData(){
 	return data;
 }
 
+$(".inqnoOfGuest").on("keyup", function(){
+	var noGuest = $(this).val();
+
+	if (noGuest !== ""){
+		if (allNumeric(noGuest) === false){
+			$(".inqnoOfGuestErr").html("Invalid no of guests");
+		}else{
+			$(".inqnoOfGuestErr").html("");
+		}
+	}else{
+		$(".inqnoOfGuestErr").html("");
+	}
+});
+
+$(".inqContactNum").on("keyup", function(){
+
+	var contactNo = $(this).val();
+
+	if (contactNo !== ""){
+		if (mobileNum(contactNo) === false){
+			$(".inqContactNumErr").html("Invalid Contact No, please follow this format (+63 or 0 + ten numbers)");
+		}else{
+			$(".inqContactNumErr").html("");
+		}
+	}else{
+		$(".inqContactNumErr").html("");
+	}
+
+});
+
+$(".inqEmail").on("keyup", function(){
+	var email = $(this).val();
+
+	if (email !== ""){
+		if (validateEmail(email) == false){
+			$(".ingEmailErr").html("Invalid Email");
+		}else{
+			$(".ingEmailErr").html("");
+		}
+	}else{
+		$(".ingEmailErr").html("");
+	}
+});
+
+$(".inqName").on("keyup", function(){
+	var name = $(this).val();
+
+	if (name !== ""){
+		if (allLetter(name) === false){
+			$(".inqNameErr").html("Invalid Full name - at least 2 to 3 word name start with uppercase letter ex: Johnny Depp or Kyrie Andrew Irving");
+		}else{
+			$(".inqNameErr").html("");
+		}
+	}else{
+		$(".inqNameErr").html("");
+	}
+});
+
 $(".typeOfVenue").on("change", function(){
 	var venueID = $(this).children(":selected").attr("id");
-	
+
 	$.post(
 		"../controller/getVenueNotes.php",
 		{
@@ -200,17 +258,17 @@ $(".btnSendInquiry").on("click", function(){
 			function(data){
 				console.log(data);
 				var dataObj = JSON.parse(data);
-				
+
 				if (dataObj.done === "TRUE"){
 					clearInquiryInputs();
 				}
-				
+
 				alert(dataObj.msg);
-				
+
 				$(".loader").css("display","none");
 				$(".loader").fadeOut("slow");
 			}
 		);
 	}
-	
+
 });

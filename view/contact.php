@@ -18,16 +18,19 @@
 								<div class="form-group">
 									<label for="email">Email (Required)</label>
 	  								<input type="text" class="form-control email inqEmail">
+									<p class="ingEmailErr"></p>
 								</div>
 
 								<div class="form-group">
 									<label for="name">Fullname (Required)</label>
 	  								<input type="text" class="form-control name inqName" placeholder="Ex: Ollie Bonifacio">
+									<p class="inqNameErr"></p>
 								</div>
 
 								<div class="form-group">
 									<label for="contactNum">Contact Number (Required)</label>
-	  								<input type="text" class="form-control contactNum inqContactNum">
+	  								<input type="text" class="form-control contactNum inqContactNum" placeholder="+63 or 0 + ten numbers">
+									<p class="inqContactNumErr"></p>
 								</div>
 
 								<div class="form-group">
@@ -41,19 +44,20 @@
 	  								<select class="form-control typeOfVenue inqVenue">
 	  								</select>
 								</div>
-								
+
 								<div class="form-group venueAddress">
 									<label for="outsideVenueAddress">Venue Address (If outside)</label>
 									<input type="text" class="form-control outsideVenueAddress">
 								</div>
-								
+
 								<div class="form-group">
 									<p class="noOfGuestsNotes"></p>
 								</div>
-								
+
 								<div class="form-group">
 									<label for="noOfGuest">No of Guests</label>
 	  								<input type="text" class="form-control noOfGuest inqnoOfGuest">
+									<p class="inqnoOfGuestErr"></p>
 								</div>
 
 								<div class="form-group">
@@ -62,13 +66,17 @@
 								</div>
 
 								<div class="form-group">
+									<p class="contactErrMsg"></p>
+								</div>
+
+								<div class="form-group">
 									<button type="button" class="btn btnSendInquiry">SEND</button>
 								</div>
 							</div>
-							
+
 						</div>
 						<div class="regFormFooter">
-							
+
 						</div>
 					</div>
 				</div>
