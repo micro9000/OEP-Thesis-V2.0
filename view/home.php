@@ -161,7 +161,7 @@
 				</div>
 
 				<div class="col-lg-12 col-md-12">
-				
+
 					<h6 class="promis">Personallize your Taste</h6>
 
 				    <p class="pramis-bola-to">
@@ -172,7 +172,7 @@
 				</div>
 
 				<div class="col-lg-12 col-md-12">
-				
+
 					<h6 class="promis">Your Dreams Into Reality</h6>
 
 				    <p class="pramis-bola-to">
@@ -183,7 +183,7 @@
 				</div>
 
 				<div class="col-lg-12 col-md-12">
-				
+
 					<h6 class="promis">Exciting, Elegant, Excellent</h6>
 
 				    <p class="pramis-bola-to">
@@ -253,13 +253,35 @@
 	</div>
 
 
-	<div class="registration">
+	<div class="availableDatesDiv">
 		<div class="container">
-			<dir class="row">
-				<div class="col-lg-4 col-md-4">
-					
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<br/>
+					<h4>Available Dates</h4>
+
+					<div class="MonthNowLabel">
+						<h3 class="monthLabel"></h3>
+						<input type="submit" class="btn btn-warning btnPrev" value='<<'>
+						<input type="submit" class="btn btn-warning btnNext" value='>>'>
+					</div>
+
+					<div class="calView"></div>
+
+					<div class="legends">
+						<h4>Legend</h4>
+						<label for="unavailable">
+							<canvas class="unavailable"></canvas>
+							Not Available
+						</label>
+						<br/>
+						<label for="available">
+							<canvas class="available"></canvas>
+							Available
+						</label>
+					</div>
 				</div>
-			</dir>
+			</div>
 		</div>
 	</div>
 

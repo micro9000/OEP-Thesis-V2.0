@@ -1,4 +1,4 @@
-	
+
 
 	<footer>
 		<div class="site-footer">
@@ -67,7 +67,7 @@
 			</div>
 		</div>
 	</footer>
-	
+
 
 <script type="text/javascript">
 	var partnerID = <?php echo (isset($_GET['partnerID'])) ? $_GET['partnerID'] : 0; ?>;

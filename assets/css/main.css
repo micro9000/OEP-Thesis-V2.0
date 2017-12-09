@@ -262,10 +262,19 @@ body{
 }
 
 /*
-		Registration
+		Available dates
 */
 
 
+.availableDatesDiv{
+	display: block;
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #282C35;
+	color:white;
+	border-bottom: 2px solid white;
+}
 
 
 /*

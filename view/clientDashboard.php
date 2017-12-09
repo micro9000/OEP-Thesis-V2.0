@@ -1,9 +1,9 @@
 <?php session_start();
-	require_once("header.php"); 
+	require_once("header.php");
 ?>
 
 <?php
-	
+
 	if (! $contentModel->isClientLoggedIn()){
 		header("Location: clientLogin.php");
 	}
@@ -41,10 +41,6 @@
 							</div>
 
 							<div class="calView"></div>
-							
-							<?php echo date('g:iA', strtotime('1:00pm')); 
-								//if ()
-							?>
 							
 							<div class="legends">
 								<h4>Legend</h4>
@@ -96,7 +92,7 @@
 										<label for="outsideVenueAddress">Venue Address (If outside)</label>
 										<input type="text" class="form-control outsideVenueAddress">
 									</div>
-									
+
 									<div class="form-group">
 										<label for="eventDate">Event Date (Required)</label>
 										<input type="text" class="form-control eventDate">
@@ -109,7 +105,7 @@
 								</div>
 
 								<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-										
+
 									<p>Note: Working Hours 10:00am to 07:00pm. For additional Hour/s (&#8369;500/hr)</p>
 
 									<div class="form-group">
@@ -184,11 +180,11 @@
 											<input type="submit" class="btn btn-warning btnUpdateEventDetails" value="UPDATE"><br/>
 										<?php else: ?>
 											<input type="submit" class="btn btn-warning btnGotoMaterials" value="NEXT"><br/>
-										<?php endif; ?>	
-										
+										<?php endif; ?>
+
 										<p class="eventDetailsMsg"></p>
 									</div>
-								</div>	
+								</div>
 							</div>
 						</div>
 					</div>
@@ -222,9 +218,9 @@
 											<input type="submit" class="btn btn-warning btnUpdateEventMaterial" value="ADD"><br/>
 										<?php else: ?>
 											<input type="submit" class="btn btn-warning btnGotoFoodsNEntertainment" value="NEXT">
-										<?php endif; ?>	
+										<?php endif; ?>
 
-										
+
 									</div>
 								</div>
 
@@ -247,7 +243,7 @@
 
 							</div>
 						</div>
-					</div>  	
+					</div>
 			    </div>
 			    <div id="foodsEntertainment" class="tab-pane fade">
 			    	<br>
@@ -274,7 +270,7 @@
 											<input type="submit" class="btn btn-warning btnUpdateEventFoodsEntertainments" value="ADD"><br/>
 										<?php else: ?>
 											<input type="submit" class="btn btn-warning btnGotoMenus" value="NEXT">
-										<?php endif; ?>	
+										<?php endif; ?>
 
 										<!-- <p class="eventDetailsMsg"></p> -->
 									</div>
@@ -299,14 +295,14 @@
 
 							</div>
 						</div>
-					</div> 
+					</div>
 			    </div>
 			    <div id="cateringMenus" class="tab-pane fade">
 			    	<br>
 			      	<h3 style="text-align:center;">Catering Menus</h3>
 			      	<div class="row menusSetsTb">
-						
-					</div> 
+
+					</div>
 			    </div>
 
 			    <div id="cateringMenu" class="tab-pane fade">
@@ -315,7 +311,7 @@
 			      	<div class="row ">
 						<div class="col-lg-12 col-md-12">
 							<table class="table table-bordered menuSetTb">
-								<thead>	
+								<thead>
 									<tr>
 										<th colspan='3' style='text-align:center'>
 											<p class='setTitle'></p>
@@ -327,7 +323,7 @@
 										<th>Change</th>
 									</tr>
 								</thead>
-								<tbody>	
+								<tbody>
 									<tr>
 										<td>Soup</td>
 										<td>
@@ -436,13 +432,13 @@
 									<input type="submit" class="btn btn-warning btnUpdateEventMenu" value="UPDATE"><br/>
 								<?php else: ?>
 									<input type="submit" class="btn btn-warning btnSubmitEventPlannerDetails" value="SUBMIT"><br/>
-								<?php endif; ?>	
+								<?php endif; ?>
 
 								<p class="eventDetailsMsg"></p>
 							</div>
 
 						</div>
-					</div> 
+					</div>
 			    </div>
 			 </div>
 		</div>
@@ -457,7 +453,7 @@
 <link rel="stylesheet" type="text/css" href="../assets/jquery-ui/jquery-ui.min.css">
 
 <script type="text/javascript">
-	
+
 	// $(".eventEstimateStartTime").timepicker().val("10:00am");
 	// $(".eventEstimateEndTime").timepicker();
 
@@ -469,7 +465,7 @@
 
 	var task = "<?php echo isset($_GET['task']) ? $_GET['task'] : ''; ?>";
 	var eventID = <?php echo isset($_GET['eventID']) ? $_GET['eventID'] : 0; ?>;
-	
+
 	if (task == "update-event-details"){
 		$(".eventDetails").trigger("click");
 
@@ -478,10 +474,10 @@
 
 	}else if(task == "update-event-foods-entertainment"){
 		$(".foodsEntertainment").trigger("click");
-		
+
 	}else if(task == "update-event-menu"){
 		$(".menu_selected").trigger("click");
-		
+
 	}
 
 </script>
