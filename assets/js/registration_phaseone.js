@@ -37,7 +37,7 @@ function getFormDataAndValidation(){
 		}else{
 
 			if (allLetter(clientFullName) === false){
-				$(".registerMsg").html("Invalid Full name");
+				$(".registerMsg").html("Invalid Full name - at least 2 to 3 word name start with uppercase letter ex: Johnny Depp or Kyrie Andrew Irving");
 				return;
 			}
 
@@ -63,7 +63,7 @@ function getFormDataAndValidation(){
 			// }
 
 			if (mobileNum(clientContactNo) === false){
-				$(".registerMsg").html("Invalid Contact No");
+				$(".registerMsg").html("Invalid Contact No, please follow this format (+63 or 0 + ten numbers)");
 				return
 			}
 
@@ -116,6 +116,73 @@ function getFormDataAndValidation(){
 
 	return {};
 }
+
+//start HERE
+
+$(".clientContactNo").on("keyup", function(){
+
+	clientContactNo = $(this).val();
+
+	if (mobileNum(clientContactNo) === false){
+		$(".registerMsg").html("Invalid Contact No, please follow this format (+63 or 0 + ten numbers)");
+	}else{
+		$(".registerMsg").html("");
+	}
+});
+
+$(".clientFullName").on("keyup", function(){
+
+	clientFullName = $(this).val();
+
+	if (allLetter(clientFullName) === false){
+		$(".registerMsg").html("Invalid Full name - at least 2 to 3 word name start with uppercase letter ex: Johnny Depp or Kyrie Andrew Irving");
+	}else{
+		$(".registerMsg").html("");
+	}
+});
+
+$(".clientPassword").on("keyup", function(){
+	var clientPassword = $(this).val();
+
+	var strength = passwordStrength(clientPassword);
+
+	if (strength[0] === 3 || strength[0] === 4){
+		$(".registerMsg").html("<br/>"+strength[1]);
+	}else{
+		$(".registerMsg").html("<br/>"+strength[1]);
+		return;
+	}
+});
+
+$(".clientConfirmPassword").on("keyup", function(){
+	var pass = $(".clientPassword").val();
+	var confirmPass = $(this).val();
+
+	if (pass !== ""){
+		if (confirmPass !== pass){
+			$(".registerMsg").html("Password doesn't match");
+		}else{
+			$(".registerMsg").html("");
+		}
+	}
+});
+
+$(".clientPassword, .clientConfirmPassword").on("focus", function(){
+
+	var msg = "<br/><p>To make your password stronger:</p>";
+
+	msg += "<ul>";
+	msg += "<li>Start with a letter</li>";
+	msg += "<li>At least 8 or more characters</li>";
+	msg += "<li>Add uppercase/lower letters</li>";
+	msg += "<li>At least one number</li>";
+	msg += "<li>One special character (!, @, #, % etc.)</li>";
+	msg += "</ul>";
+
+	$(".registerMsg").html(msg);
+});
+
+//end HERE
 
 function clearRegInputs(){
 	$(".clientEmail").val("");

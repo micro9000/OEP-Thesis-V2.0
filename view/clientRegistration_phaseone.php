@@ -47,12 +47,12 @@
 
 									<div class="form-group">
 										<label for="clientFullName">Full name (required)</label>
-		  								<input type="text" class="form-control clientFullName">
+		  								<input type="text" class="form-control clientFullName" placeholder="ex. Johnny Depp">
 									</div>
 
 									<div class="form-group">
 										<label for="clientContactNo">Contact No (required)</label>
-		  								<input type="text" class="form-control clientContactNo" placeholder="+63 or 0 + xxxxxxxxxx">
+		  								<input type="text" class="form-control clientContactNo" placeholder="+63 or 0 + ten numbers">
 									</div>
 
 									<div class="form-group">

@@ -11,17 +11,17 @@ $(".recoverPassForm").on("submit", function(e){
 			"../controller/isEmailRegistered.php",
 			{
 				"email" : clientEmail
-			}, 
+			},
 			function(data){
 				// console.log(data);
 				var dataObj = JSON.parse(data);
-				
+
 				if (dataObj.done === "TRUE"){
-					$(".emailRecMsg").html("Please check you email account to continue.");
+					$(".emailRecMsg").html("Please check your email account to continue.");
 				}else{
 					$(".emailRecMsg").html("Email not found.");
 				}
-				
+
 			}
 		);
 	}
@@ -51,7 +51,7 @@ $(".recoverMyPassForm").on("submit", function(e){
 					"confirmPass" : confirmPass,
 					"tag" : tag,
 					"email" : email
-				}, 
+				},
 				function(data){
 					var dataObj = JSON.parse(data);
 
@@ -63,6 +63,6 @@ $(".recoverMyPassForm").on("submit", function(e){
 		}
 	}
 
-		
+
 
 })

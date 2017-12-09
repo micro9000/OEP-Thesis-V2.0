@@ -1,8 +1,6 @@
 <?php session_start();
-	require_once("header.php"); 
-?>
+	require_once("header.php");
 
-<?php
 	if ($contentModel->isClientLoggedIn()){
 		header("Location: clientDashboard.php");
 	}
@@ -36,7 +34,7 @@
 							</div>
 						</div>
 					</form>
-					
+
 				</div>
 			</div>
 		</div>
