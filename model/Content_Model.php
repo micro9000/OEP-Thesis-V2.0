@@ -1,5 +1,5 @@
 <?php
-	
+
 	require_once("database/Connection.php");
 
 	class Content_Model extends Connection{
@@ -30,7 +30,7 @@
 										  "imgServerFileName" => $row['imgServerFileName'],
 										  "imgOrigFilename" => $row['imgOrigFilename'],
 										  "userName" => $row['userName'],
-										  "userId" => $row['userId'] 
+										  "userId" => $row['userId']
 										);
 
 						array_push($slideshow, $slideshowData);
@@ -41,7 +41,7 @@
 					return $slideshow;
 				}
 			}
-			
+
 			return $slideshow;
 		}
 
@@ -77,14 +77,14 @@
 					return $events;
 				}
 			}
-			
+
 			return $events;
 		}
 
 		public function getEventsByFlag($all = true, $limit = 0){
 
 			$events = array();
-			
+
 
 			$query = "";
 			if ($all == true && $limit == 0){
@@ -107,7 +107,7 @@
 		public function getEventInfoByID($eventID = 0){
 
 			$events = array();
-			
+
 			$eventID = $this->sanitizeInput($eventID);
 
 			$query = "SELECT RE.*, S.service
@@ -116,7 +116,7 @@
 
 			$events = $this->getEvents_Query($query);
 
-			
+
 			return $events;
 		}
 
@@ -124,7 +124,7 @@
 		public function getEventInfoByServiceID($serviceID = 0){
 
 			$events = array();
-			
+
 			$serviceID = $this->sanitizeInput($serviceID);
 
 			$query = "SELECT RE.*, S.service
@@ -133,7 +133,7 @@
 
 			$events = $this->getEvents_Query($query);
 
-			
+
 			return $events;
 		}
 
@@ -163,7 +163,7 @@
 					}
 				}
 			}
-			
+
 			return $imagesData;
 		}
 
@@ -196,7 +196,7 @@
 					return $images;
 				}
 			}
-			
+
 			return $images;
 		}
 
@@ -219,7 +219,7 @@
 					}
 				}
 			}
-			
+
 			return $service;
 		}
 
@@ -253,14 +253,14 @@
 					return $partners;
 				}
 			}
-			
+
 			return $partners;
 		}
 
 		public function getAllPartners(){
 
 			$partners = array();
-		
+
 			$query = "SELECT * FROM Partners WHERE isDeleted=0 ORDER BY id DESC";
 
 			$partners = $this->getPartners_Query($query);
@@ -274,7 +274,7 @@
 			$partners = array();
 
 			$partnerID = $this->sanitizeInput($partnerID);
-		
+
 			$query = "SELECT * FROM Partners WHERE isDeleted=0 AND id=" . $partnerID;
 
 			$partners = $this->getPartners_Query($query);
@@ -348,7 +348,7 @@
                                   WHERE SM.serviceID=S.id AND S.isDeleted=0 AND SM.isDeleted=0 AND S.id=" . $serviceId;
 
 			$services = $this->getServiceMotifs_Query($query);
-			
+
 			return $services;
 		}
 
@@ -390,7 +390,7 @@
 
 				if (is_object($result) && !empty($result->num_rows)) {
 					while ($row = $result->fetch_assoc()) {
-						$notes = array("notes" => $row['notes'], 
+						$notes = array("notes" => $row['notes'],
 										"isOutside" => $row['isOutside']);
 					}
 
@@ -616,7 +616,7 @@
 				$password = $this->sanitizeInput($password);
 
 				$hashPass = hash('sha512', $password);
-				
+
 				$query = "INSERT INTO RegisteredClient(email, uniqueTag, fullName, contactNo, clientPass) ";
 				$query .= "VALUES('". $emailAdd ."', '". $regTag ."', '". $fullName ."', '". $contactNo ."', '". $hashPass ."')";
 
@@ -774,7 +774,7 @@
 					return $materials;
 				}
 			}
-			
+
 			return $materials;
 		}
 
@@ -820,7 +820,7 @@
 					return $themes;
 				}
 			}
-			
+
 			return $themes;
 		}
 
@@ -835,7 +835,7 @@
 						  WHERE MT.materialID=M.id AND MT.isDeleted=0 AND M.isDeleted=0 AND MT.materialID=" . $materialID;
 
 			$themes = $this->getThemesPerMaterialBy_Query($query);
-			
+
 			return $themes;
 		}
 
@@ -866,7 +866,7 @@
 					return $images;
 				}
 			}
-			
+
 			return $images;
 		}
 
@@ -909,7 +909,7 @@
 					return $categories;
 				}
 			}
-			
+
 			return $categories;
 		}
 
@@ -941,7 +941,7 @@
 					$result->free();
 				}
 			}
-			
+
 			return $motifs;
 		}
 
@@ -973,7 +973,7 @@
 					return $images;
 				}
 			}
-			
+
 			return $images;
 		}
 
@@ -982,7 +982,7 @@
 			$images = array();
 
 			$motifID = $this->sanitizeInput($motifID);
-		
+
 			$query = "SELECT * FROM PartnersMotifImages WHERE isDelete=0 AND motifID=" . $motifID;
 
 			$images = $this->getPartnersMotifImages_Query($query);
@@ -1039,7 +1039,7 @@
 			$query = "SELECT * FROM Menus WHERE isDeleted=0";
 
 			$menus = $this->getMenus_Query($query);
-			
+
 			return $menus;
 		}
 
@@ -1052,7 +1052,7 @@
 			$query = "SELECT * FROM Menus WHERE isDeleted=0 AND id=" . $id;
 
 			$menus = $this->getMenus_Query($query);
-			
+
 			return $menus;
 		}
 
@@ -1081,7 +1081,7 @@
 					$result->free();
 				}
 			}
-			
+
 			return $items;
 		}
 
@@ -1116,7 +1116,7 @@
 					}
 				}
 			}
-			
+
 			return false;
 		}
 
@@ -1133,7 +1133,7 @@
 			if ($selectedDate <= $todayPlsOneWeek){
 
 				$results = array("done" => "FALSE", "msg" => "Invalid Date - it must be 1 week preparation before the event");
-		
+
 			}else{
 
 				$isAlreadyUsed = $this->isSelectedDateAlreadyUsed($selectedDate);
@@ -1179,7 +1179,7 @@
 					}
 				}
 			}
-			
+
 			return true;
 		}
 
@@ -1206,7 +1206,7 @@
 					$result->free();
 				}
 			}
-			
+
 			return $selectedDates;
 		}
 
@@ -1234,7 +1234,7 @@
 
 				// echo $eventsDate;
 
-				$query = "INSERT INTO ClientEvents(clientInfoID, serviceID, serviceMotifID, 
+				$query = "INSERT INTO ClientEvents(clientInfoID, serviceID, serviceMotifID,
 							venueID, eventDate, eventStartTime, eventEndTime,noOfGuests, venueAddress) ";
 				$query .= "VALUES(". $clientID .", ". $typeOfEvent .", ". $serviceMotif .", ". $typeOfVenue .",
 							'". $eventDate ."', '". $eventEstimateStartTime ."', '". $eventEstimateEndTime ."', ". $noOfGuests .", '". $venueAddress ."')";
@@ -1340,7 +1340,7 @@
 				$materialID = $this->sanitizeInput($materialID);
 				$materialMotifImgID = $this->sanitizeInput($materialMotifImgID);
 
-				$query = "SELECT COUNT(*) as count FROM EventsMaterials WHERE isDeleted=0 AND 
+				$query = "SELECT COUNT(*) as count FROM EventsMaterials WHERE isDeleted=0 AND
 						eventID=". $eventID ." AND materialID=". $materialID ." AND materialMotifImgID=". $materialMotifImgID;
 
 				$result = $this->conn->query($query);
@@ -1390,7 +1390,7 @@
 				$prodCatID = $this->sanitizeInput($prodCatID);
 				$imgID = $this->sanitizeInput($imgID);
 
-				$query = "SELECT COUNT(*) as count FROM EventsFoodsEntertainments WHERE isDeleted=0 AND eventID=". $eventID ." 
+				$query = "SELECT COUNT(*) as count FROM EventsFoodsEntertainments WHERE isDeleted=0 AND eventID=". $eventID ."
 							AND prodCatID=". $prodCatID ." AND PartnersMotifImgID=" . $imgID;
 
 				$result = $this->conn->query($query);
@@ -1431,7 +1431,7 @@
 				$eventID = $this->sanitizeInput($data['eventID']);
 				$menuID = $this->sanitizeInput($data['menuID']);
 
-				$query = "INSERT INTO EventsSelectedMenu(eventID, setID, soup, chicken, 
+				$query = "INSERT INTO EventsSelectedMenu(eventID, setID, soup, chicken,
 								seafoods, porkBeef, vegetable, rice, salad, dessert, drinks) ";
 
 				$query .= "VALUES(". $eventID .", ". $menuID .", '". $soup ."', '". $chicken ."', '". $seafoods ."',
@@ -1465,8 +1465,8 @@
 				$eventID = $this->sanitizeInput($data['eventID']);
 				$menuID = $this->sanitizeInput($data['menuID']);
 
-				$query = "UPDATE EventsSelectedMenu SET setID=". $menuID .", soup='". $soup ."', chicken='". $chicken ."', 
-						seafoods='". $seafoods ."', porkBeef='". $porkBeef ."', vegetable='". $vegetable ."', rice='". $rice ."', 
+				$query = "UPDATE EventsSelectedMenu SET setID=". $menuID .", soup='". $soup ."', chicken='". $chicken ."',
+						seafoods='". $seafoods ."', porkBeef='". $porkBeef ."', vegetable='". $vegetable ."', rice='". $rice ."',
 						salad='". $salad ."', dessert='". $dessert ."', drinks='". $drinks ."' WHERE isDeleted=0 AND eventID=" . $eventID;
 
 				if ($this->conn->query($query) === TRUE){
@@ -1552,7 +1552,7 @@
 
 				$eventID = $this->sanitizeInput($eventID);
 
-				$query ="SELECT EM.id, MTI.serverName, MTI.referenceNo, MT.theme, M.material, MTI.price 
+				$query ="SELECT EM.id, MTI.serverName, MTI.referenceNo, MT.theme, M.material, MTI.price
 						FROM EventsMaterials as EM, MaterialsTheme_images MTI, MaterialThemes as MT, Materials as M
 						WHERE EM.isDeleted=0 AND EM.materialMotifImgID=MTI.id AND MTI.themeID=MT.id AND EM.materialID=M.id
 						AND EM.eventID=" . $eventID;
@@ -1590,7 +1590,7 @@
 				$query ="SELECT EFE.id, PPC.prodCat, PMI.serverName, PMI.imageRefNo, PM.theme, PMI.price
 						FROM EventsFoodsEntertainments as EFE, PartnersProductCategory as PPC, PartnersMotifImages as PMI, PartnersMotif as PM
 						WHERE EFE.isDeleted=0 AND EFE.prodCatID=PPC.id AND EFE.PartnersMotifImgID=PMI.id AND PMI.motifID=PM.id AND EFE.eventID=" . $eventID;
-				
+
 				$result = $this->conn->query($query);
 
 				if (is_object($result) && !empty($result->num_rows)) {
@@ -1621,7 +1621,7 @@
 
 				$eventID = $this->sanitizeInput($eventID);
 
-				$query ="SELECT ESM.id, M.setTitle, M.setPrice, ESM.soup, ESM.chicken, ESM.seafoods, ESM.porkBeef, 
+				$query ="SELECT ESM.id, M.setTitle, M.setPrice, ESM.soup, ESM.chicken, ESM.seafoods, ESM.porkBeef,
 						ESM.vegetable,ESM.rice,ESM.salad,ESM.dessert,ESM.drinks
 						FROM Menus as M, EventsSelectedMenu as ESM
 						WHERE ESM.setID=M.id AND ESM.eventID=" . $eventID;
@@ -1782,7 +1782,7 @@
 			if (! $this->conn->connect_error){
 
 				$eventID = $this->sanitizeInput($eventID);
-			
+
 				for($i=0; $i<$materiaIDLen; $i++){
 
 					$materialIDTemp = $materiaIDs[$i]['materialID'];
@@ -1806,7 +1806,7 @@
 					}
 
 					$result->free();
-				}	
+				}
 
 			}
 
@@ -1863,7 +1863,7 @@
 			if (! $this->conn->connect_error){
 
 				$eventID = $this->sanitizeInput($eventID);
-			
+
 				for($i=0; $i<$prodCatIDLen; $i++){
 
 					$prodCatIDTemp = $prodCatIDs[$i]['prodCatID'];
@@ -1887,7 +1887,7 @@
 					}
 
 					$result->free();
-				}	
+				}
 
 			}
 
@@ -1939,7 +1939,7 @@
 
 				if (is_object($result) && !empty($result->num_rows)) {
 					while ($row = $result->fetch_assoc()) {
-						
+
 						$bills = array(
 								"id" => $row['id'],
 								"billFileServer" => $row['billFileServer'],
@@ -2158,6 +2158,34 @@
 			return true;
 		}
 
+		public function checkIfEventSchedIsApplicable($start, $end, $date){
+
+			$count = 0;
+
+			if (! $this->conn->connect_error){
+
+				$start = $this->sanitizeInput($start);
+				$end = $this->sanitizeInput($end);
+				$date = $this->sanitizeInput($date);
+
+				$date = $this->getProperDate($date);
+
+				$query ="SELECT COUNT(*) as count FROM ClientEvents WHERE ((eventStartTime BETWEEN '". $start ."' AND '". $end ."')
+				OR (eventEndTime BETWEEN '". $start ."' AND '". $end ."')) AND eventStatus=2 and eventDate='". $date ."' AND isDeleted=0";
+
+				$result = $this->conn->query($query);
+
+				if (is_object($result) && !empty($result->num_rows)) {
+					while ($row = $result->fetch_assoc()) {
+						$count = $row['count'];
+					}
+
+					$result->free();
+				}
+			}
+
+			return $count;
+		}
 	}
 
 ?>

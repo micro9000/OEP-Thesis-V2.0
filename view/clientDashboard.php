@@ -17,6 +17,11 @@
 
 		<div class="eventPlanerTabs">
 			<h2>Event Planner</h2>
+
+			<div class="userInfoDiv">
+				<p>User: <?php echo isset($_SESSION['client_FullName']) ? $_SESSION['client_FullName'] : "Unkown Error"; ?></p>
+			</div>
+
 		  	<ul class="nav nav-tabs">
 		  		<li class="active"><a data-toggle="tab" href="#availableDates">Available Dates</a></li>
 		    	<li><a data-toggle="tab" href="#eventDetails" class="eventDetails">Event Details</a></li>
@@ -41,7 +46,7 @@
 							</div>
 
 							<div class="calView"></div>
-							
+
 							<div class="legends">
 								<h4>Legend</h4>
 								<label for="unavailable">

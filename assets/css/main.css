@@ -678,3 +678,11 @@ body{
 .venueAddress{
 	display: none;
 }
+
+.userInfoDiv{
+	display: block;
+	width: 90%;
+	margin: auto;
+	text-align: right;
+	margin-right: 20px;
+}

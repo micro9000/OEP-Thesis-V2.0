@@ -1686,20 +1686,23 @@ $(".btnUpdateEventMenu").on("click",function(){
 	}
 })
 
-function checkSelectedTimesIfValid(start, end){
+function checkSelectedTimesIfValid(start, end, eventDate){
 	$.post(
 		"../controller/checkSelectedTime.php",
 		{
 			"start" : start,
-			"end" : end
+			"end" : end,
+			"eventDate" : eventDate
 		},
 		function(data){
+
 			var dataObj = JSON.parse(data);
-			if (dataObj.done === "TRUE"){
-				$(".selectDateMsg").html(dataObj.msg);
-			}else{
-				$(".selectDateMsg").html("");
-			}
+			// if (dataObj.done === "TRUE"){
+			// 	$(".selectDateMsg").html(dataObj.msg);
+			// }else{
+			// 	$(".selectDateMsg").html("");
+			// }
+			$(".selectDateMsg").html(dataObj.msg);
 		}
 	);
 }
@@ -1707,17 +1710,19 @@ function checkSelectedTimesIfValid(start, end){
 $(".eventEstimateEndTime").on("change", function(){
 	var startTime = $(".eventEstimateStartTime").val();
 	var endTime = $(this).val();
+	var eventDate = $(".eventDate").val();
 
 	if (startTime !== ""){
-		checkSelectedTimesIfValid(startTime, endTime);
+		checkSelectedTimesIfValid(startTime, endTime, eventDate);
 	}
 })
 
 $(".eventEstimateStartTime").on("change", function(){
 	var startTime = $(this).val();
 	var endTime = $(".eventEstimateEndTime").val();
+	var eventDate = $(".eventDate").val();
 
 	if (endTime !== ""){
-		checkSelectedTimesIfValid(startTime, endTime);
+		checkSelectedTimesIfValid(startTime, endTime, eventDate);
 	}
 })

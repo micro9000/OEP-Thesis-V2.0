@@ -45,7 +45,6 @@
 		$.post(
 			"../controller/getAllSelectedDates.php",
 			function(data){
-				console.log(data);
 				var dataObj = JSON.parse(data);
 				var dataLen = dataObj.length;
 
@@ -273,7 +272,3 @@
 	// 		console.log("YES");
 	// 	}
 	// });
-
-	$(".monthViewTb tr td").hover(function(){
-		alert("HI");
-	});

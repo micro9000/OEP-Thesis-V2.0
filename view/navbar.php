@@ -1,4 +1,4 @@
-	
+
 	<header>
 		<div class="navigation">
 			<div class="container">
@@ -25,7 +25,7 @@
 								</ul>
 							</nav>
 						</div>
-						
+
 					<?php else: ?>
 
 						<div class="col-lg-5 col-md-12 col-sm-12">
@@ -42,6 +42,7 @@
 									<li><a href="clientDashboard.php">HOME</a></li>
 									<li><a href="clientEventStatus.php">EVENT STATUS</a></li>
 									<li><a href="clientRecentEvents.php">RECENT EVENTS</a></li>
+									<li><a href="#.php">SETTINGS</a></li>
 									<li><a href="clientLogout.php">LOGOUT</a></li>
 								</ul>
 							</nav>
@@ -59,7 +60,7 @@
 			</div>
 		</div>
 	</header>
-	
+
 	<script type="text/javascript">
 		$(".handle").on("click", function(){
 			$(".navbar").toggleClass("showing");
