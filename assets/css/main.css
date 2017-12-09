@@ -133,7 +133,7 @@ body{
 	width: 100%;
 	height: 400px;
 	text-align: center;
-	
+
 }
 
 .compMap img{
@@ -360,11 +360,11 @@ body{
 }
 
 /*
-	Client Login page 
+	Client Login page
 */
 
 .client-login-form{
-	height: 400px;
+	height: 550px;
 	display: block;
 	background-size: 1500px;
 	background-image: url("../img/supercrop_bg_1.svg");
@@ -652,9 +652,9 @@ body{
 	text-align:right; width: 30px;
 }
 
-#reservationFee, #materialsTotal, #foodsEnterTotal, 
+#reservationFee, #materialsTotal, #foodsEnterTotal,
 #menuFeeTotal, #totalComputation, #totalBalance, #downOrFullPaymentTotal, #addionalHrFee{
-	text-align:right; 
+	text-align:right;
 	width: 50px;
 }
 
