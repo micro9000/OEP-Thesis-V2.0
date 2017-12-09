@@ -1,0 +1,1 @@
+[05-Dec-2017 18:00:25 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/onebuffetadmin/public_html/model/database/Connection.php on line 13

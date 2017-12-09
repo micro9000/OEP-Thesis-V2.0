@@ -1,0 +1,133 @@
+
+	.navigation{
+		box-sizing: border-box;
+		width: 100%;
+		margin: 0;
+	    padding: 0;
+	    background-color: white;
+	    border-bottom: 3px solid #f95307;
+	}
+
+	.branding p{
+		font-size: 25px;
+	    text-decoration: none;
+		display: block;
+	    color: #3a3b3d;
+	   	padding: 14px 16px;
+	    text-align: left;
+	    padding-top: 25px;
+	    padding-bottom: 25px;
+	    color: #f95307;
+	    font-family: pacifico;
+	}
+
+	.branding a{
+		text-decoration: none;
+	}
+
+	.navbar{
+		list-style-type: none;
+	    overflow: hidden;
+	    -webkit-transition: max-height 0.4s;
+	    -ms-transition: max-height 0.4s;
+	    -moz-transition: max-height 0.4s;
+	    -o-transition: max-height 0.4s;
+	    transition: max-height 0.4s;
+	}
+
+	.navbar li a {
+		margin:0;
+	    display: inline-block;
+	    color: #3a3b3d;
+	    text-align: center;
+	    padding: 14px 16px;
+	    text-decoration: none;
+	    padding-top: 25px;
+	    padding-bottom: 25px;
+	}
+
+	.navbar li a:hover{
+		color: #f95307;
+		border-bottom: 1px solid #f95307;
+	}
+
+	.handle{
+		width: 100%;
+		text-align: right;
+		box-sizing: border-box;
+		padding: 15px 10px;
+		cursor: pointer;
+		display: none;
+	}
+
+	@media screen and (max-width: 740px){
+		.branding h2 a{
+			font-size: 30px;
+		}
+		.navbar li a {
+			font-size: 13px;
+		}
+	}
+
+	@media screen and (max-width: 880px){
+		.navbar{
+			max-height: 0;
+		}
+		.showing{
+			max-height: 20em;
+		}
+		.navbar li{
+			box-sizing: border-box;
+			width: 100%;
+			padding: 15px;
+			text-align: center;
+			border-bottom: 2px solid #f95307;
+		}
+		.navbar li a {
+			padding: 1px 3px;
+		}
+		.branding h2 a{
+			padding: 5px;
+			padding-bottom: 0;
+		}
+		.prev, .next{
+			display: none;
+		}
+		.handle{
+			display: block;
+			font-size: 15px;
+		}
+		.handle:hover{
+			color: #f95307;
+		}
+		.icon{
+			text-align: right;
+			color: black;
+		}
+		.icon:hover{
+			text-decoration: none;
+			color: #f95307;
+		}
+	}
+
+/*	@media screen and (max-width: 600px) {
+		.nav li:not(:first-child) {display: none;}
+		.nav li a.icon{
+			display: block;
+			float: right;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+	  .nav.responsive {position: relative;}
+	  .nav.responsive .icon {
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	  }
+	  .nav.responsive a {
+	    float: none;
+	    display: block;
+	    text-align: left;
+	  }
+	}*/

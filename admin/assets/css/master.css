@@ -1,0 +1,615 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #cecece;
+}
+
+/* Navbar */
+
+.siteTitle{
+    padding: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    background-color:  #e8e8e8;
+    color:#133455;
+    font-size: 20px;
+}
+
+.topbar ul {
+    font-size: 12px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #133455;
+}
+
+.topbar ul li {
+    float: left;
+    padding-bottom: 5px;
+    /*border-right:1px solid #bbb;*/
+}
+
+/*.topbar ul li:last-child {
+    border-right: none;
+}*/
+
+.topbar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topbar ul li a:hover:not(.active) {
+    /*background-color: #133470;*/
+    border-bottom: 2px solid white;
+}
+
+.active {
+    border-bottom: 2px solid white;
+    /*background-color: #4CAF50;*/
+}
+
+/* Login */
+
+.btn{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:  #133470;
+    color:white;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #133470;
+}
+
+.inputFld{
+    width: 80%;
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.login{
+    padding: 20px;
+    box-shadow: 10px 10px 5px #888888;
+    height: auto;
+    width: 40%;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #e8e8e8;
+    color: #133455;
+    font-size: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login_header{
+    color: #133455;
+}
+
+.login_body{
+    height: auto;
+}
+
+.login_footer{
+    padding: 20px;
+}
+.loginMsg{
+    color: #133455;
+}
+
+.inputFlds{
+    padding: 20px;
+    box-shadow: 10px 10px 5px #888888;
+    height: auto;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #e8e8e8;
+    color: #133455;
+    font-size: 15px;
+}
+
+.inputFldTitle{
+    background-color: #133455;
+    color:white;
+    text-align: right;
+    width: 20%;
+}
+
+.inputFlds_header{
+    text-align: center;
+}
+
+.inputFlds_body{
+    width: 100%;
+}
+
+.slideshow_inputTb{
+    width: 60%;
+    height: auto;
+}
+
+
+.slideshow_inputTb, .slideshow_inputTb tr td, .slideshow_inputTb tr th,
+.slideshowListTb, .slideshowListTb tr td, .slideshowListTb tr th{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.slideshowListTb{
+    width: 100%;
+}
+
+.slideshowListTb tr th{
+    background-color: #133455;
+    color: white;
+}
+
+.slideShowContent, .recentEventDescription, .partnersInfo, .recentEventClientComments{
+    width: 90%;
+    height: 80px;
+    resize: none;
+}
+
+.slideImage{
+    margin:auto;
+    margin-top: 20px;
+    text-align: center;
+    width: 90%;
+    height: 500px;
+}
+.slideImage img{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #133455;
+}
+
+.recentEvent_inputTb{
+    width: 60%;
+}
+
+.recentEvent_inputTb,
+.recentEvent_inputTb tr th,
+.recentEvent_inputTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+
+.recentEventsListTb{
+    width: 100%;
+}
+
+.recentEventsListTb,
+.recentEventsListTb tr th,
+.recentEventsListTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.recentEventsListTb tr th {
+    background-color: #133455;
+    color: white;
+}   
+
+
+.partners_inputTb, .prodCat_inputTb{
+    width: 60%;
+}
+
+.partners_inputTb,
+.partners_inputTb tr th,
+.partners_inputTb tr td,
+.prodCat_inputTb,
+.prodCat_inputTb tr th,
+.prodCat_inputTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.prodCat_inputTb tr th{
+    background-color: #133455;
+    color: white;
+}
+
+.partnersListTb{
+    width: 100%;
+}
+.partnersListTb,
+.partnersListTb tr th,
+.partnersListTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.partnersListTb tr th {
+    background-color: #133455;
+    color: white;
+}   
+
+.motifInputFlds, .motifListTb{
+    width: 50%;
+}
+
+.motifInputFlds tr th, .motifListTb tr th{
+    background-color: #133455;
+    color: white;
+} 
+
+.motifInputFlds,
+.motifInputFlds tr th,
+.motifInputFlds tr td,
+.motifListTb,
+.motifListTb tr th,
+.motifListTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.inputMaterialsTb, .materialListTb{
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.inputMaterialsTb, 
+.inputMaterialsTb tr th,
+.inputMaterialsTb tr td,
+.materialListTb,
+.materialListTb tr th,
+.materialListTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.materialListTb tr th{
+    background-color: #133455;
+    color:white;
+}
+
+.materialMotif{
+    width: 60%;
+}
+
+.materialMotif,
+.materialMotif tr th,
+.materialMotif tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.materialMotif tr th{
+    background-color:  #133455;
+    color:white;
+}
+
+.materialThemeListTb{
+    width: 60%;
+}
+
+.materialThemeListTb,
+.materialThemeListTb tr th,
+.materialThemeListTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.materialThemeListTb tr th{
+    background-color:  #133455;
+    color:white;
+}
+
+.servicesInputFldsTb, .servicesListTb, 
+.serviceMotifFldsTb, .serviceMotifListTb{
+    width: 50%;
+}
+
+.servicesInputFldsTb,
+.servicesInputFldsTb tr th,
+.servicesInputFldsTb tr td,
+.servicesListTb,
+.servicesListTb tr th,
+.servicesListTb tr td,
+.serviceMotifFldsTb,
+.serviceMotifFldsTb tr th,
+.serviceMotifFldsTb tr td,
+.serviceMotifListTb,
+.serviceMotifListTb tr th,
+.serviceMotifListTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.servicesInputFldsTb tr th, .servicesListTb tr th, 
+.serviceMotifFldsTb tr th, .serviceMotifListTb tr th{
+    background-color:  #133455;
+    color:white;
+    text-align: center;
+}
+.servicesListTb, .serviceMotifFldsTb,.serviceMotifListTb{
+    margin-top: 10px;
+}
+
+.menusInputFlds{
+    width: 70%;
+}
+
+.menusInputFlds, .menusInputFlds tr th, .menusInputFlds tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+.menusInputFlds tr th{
+    background-color:  #133455;
+    color:white;
+    text-align: center;
+}
+
+.menusListTb{
+    width: 100%;
+    font-size: 12px;
+}
+
+.menusListTb, .menusListTb tr th, .menusListTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.menusListTb tr th{
+    background-color:  #133455;
+    color:white;
+    text-align: center;
+}
+
+.changeUserNameTb, .changePasswordTb{
+    width: 48%;
+}
+
+.changeUserNameTb{
+    float:left;
+}
+
+.changePasswordTb{
+    float: right;
+}
+
+.clear_both{
+    clear:both;
+}
+
+.changeUserNameTb,
+.changeUserNameTb tr th,
+.changeUserNameTb tr td,
+.changePasswordTb,
+.changePasswordTb tr th,
+.changePasswordTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.changeUserNameTb tr th,
+.changePasswordTb tr th{
+    background-color:  #133455;
+    color:white;
+    text-align: center;
+}
+
+.addUserTb{
+    width: 60%;
+}
+
+.addUserTb, 
+.addUserTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.usersListTb{
+    width: 100%;
+}
+
+.usersListTb, .usersListTb tr th, .usersListTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.usersListTb tr th{
+    background-color:  #133455;
+    color:white;
+    text-align: center;
+}
+
+.venueInputTb, .venueListTb{
+    width: 50%;
+}
+
+.venueInputTb, .venueInputTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.venueListTb, .venueListTb tr th, .venueListTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+.venueListTb tr th{
+    background-color:  #133455;
+    color:white;
+    text-align: center;
+}
+
+.budgetInputTb, .budgetListTb{
+    width: 50%;
+}
+
+.budgetInputTb, .budgetInputTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.budgetListTb, .budgetListTb tr th, .budgetListTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.budgetListTb tr th{
+    background-color:  #133455;
+    color:white;
+    text-align: center;
+}
+
+.inquiriesTb{
+    width: 100%;
+    font-size: 12px;
+}
+
+.inquiriesTb, .inquiriesTb tr th, .inquiriesTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+.inquiriesTb tr th{
+    background-color:  #133455;
+    color:white;
+    text-align: center;
+}
+
+.newEventsTb{
+    width: 100%;
+    font-size: 12px;
+}
+
+.clientInfoTb{
+    width: 60%;
+    font-size: 15px;
+    margin-bottom:  20px;
+}
+
+.menuListTb{
+    width: 60%;
+}
+
+.newEventsTb, .newEventsTb tr th, .newEventsTb tr td,
+.menuListTb, .menuListTb tr th, .menuListTb tr td,
+.clientInfoTb, .clientInfoTb tr th, .clientInfoTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.newEventsTb tr th, .menuListTb tr th, .clientInfoTb tr th{
+    background-color:  #133455;
+    color:white;
+    text-align: center;
+}
+
+.eventMaterials, .eventFoodsEntertainments{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.menuItem{
+    width: 20%;
+}
+
+.newEventsTb{
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.btns{
+    width: 100%;
+    text-align: center;
+}
+
+.clientListTb{
+    width: 100%;
+    font-size: 12px;
+}
+
+.clientListTb tr th{
+    background-color:  #133455;
+    color:white;
+    text-align: center;
+}
+
+.clientListTb, .clientListTb tr th, .clientListTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.searchClientTb{
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.paymentDetails, .paymentBillsTb{
+    width: 50%;
+}
+.paymentBillsTb{
+    margin-top: 10px;
+}
+
+.paymentDetails, .paymentDetails tr td, 
+.paymentBillsTb, .paymentBillsTb tr th, .paymentBillsTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.computation{
+    float: left;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.computationFlds{
+    margin-bottom: 20px;
+}
+
+.downpaymentLog{
+    float: left;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.downpaymentInputFlds{
+    margin-top: 20px;
+}
+
+#phpCurCode{
+    text-align:right; width: 30px;
+}
+
+#reservationFee, #materialsTotal, #foodsEnterTotal,
+ #menuFeeTotal, #totalComputation, #downpaymentOrPaymentTotal, #balance, #additionalHrFee{
+    text-align:right; 
+    width: 50px;
+}
+
+#totalComputation, #downpaymentOrPaymentTotal, #balance{
+    font-size: 20px;
+}
+
+#downpaymentOrPaymentTotal{
+    color: blue;
+}
+
+#balance{
+    color: red;
+}
+
+.downpaymentLogTb{
+    width: 100%;
+}
+
+.downpaymentLogTb tr th{
+    text-align: center;
+}
+
+.downpaymentLogTb, .downpaymentLogTb tr th, .downpaymentLogTb tr td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}

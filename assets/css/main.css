@@ -1,0 +1,671 @@
+@font-face{
+	font-family: gandhi;
+	src: url("../fonts/GandhiSans-Regular.otf");
+}
+
+@font-face{
+	font-family: lily-valley;
+	src: url("../fonts/Lily-Valley.ttf");
+}
+
+
+@font-face{
+	font-family: blueeye;
+	src: url("../fonts/blue-eye.ttf");
+}
+
+@font-face{
+	font-family: pacifico;
+	src: url("../fonts/Pacifico.ttf");
+}
+
+body{
+	margin:0;
+	padding:0;
+	/*font-family: 'Arial', 'serif';*/
+	font-family: gandhi;
+	color:#595959;
+	background-color: #f8f8fa;
+}
+
+.clear{
+	clear:both;
+}
+
+
+/*.main{
+	position: none;
+}*/
+
+.eventImages{
+	margin-top: 10px;
+}
+
+.eventImages img.img-thumbnail{
+	height: 170px;
+}
+
+/*.eventInfo{
+	height: 500px;
+}*/
+
+.eventImages_info{
+	margin-top: 40px;
+	border: 3px solid #f95307;
+}
+
+.eventImages_info img{
+	height: 300px;
+	width: 100%;
+}
+
+.eventInfo{
+	padding: 10px;
+	margin-top: 40px;
+	height: 500px;
+	width: 100%;
+	background-size: 2500px;
+	background-image: url("../img/supercrop_bg_2.svg");
+	background-repeat: no-repeat;
+}
+
+#eventName{
+	border-left: 3px solid #f95307;
+	font-size: 25px;
+}
+
+#address, #eventDate, #service, #description, #clientComments{
+	font-size: 15px;
+	font-family: sans-serif;
+	padding-left: 20px;
+}
+
+/*
+	About US ->
+*/
+.about-us-section{
+	padding-top: 100px;
+	padding-bottom: 50px;
+	display: block;
+	margin-top: 0;
+	margin-bottom: 0;
+	height: auto;
+	border-radius: 20px ;
+	background-size: 2000px;
+	background-image: url("../img/supercrop_bg_1.svg");
+	background-repeat: no-repeat;
+}
+
+.mission_vision{
+	text-align: center;
+}
+
+.about-title{
+	border-left: 3px solid #f95307;
+	padding-left: 5px;
+	margin-bottom: 10px;
+}
+
+.about_us, .services_list{
+	text-align: justify;
+	text-justify: inter-word;
+	padding-top: 20px;
+	height: auto;
+	color:#595959;
+	margin-bottom: 20px;
+	/*background-size: 2000px;*/
+	/*background-image: url("../img/supercrop_bg_1.svg");*/
+}
+
+
+.designer_info{
+	height: 120px;
+	width: 120px;
+	padding-left: 10px;
+}
+.designer_info img{
+	height: 120px;
+	width: 120px;
+	border-radius: 20px;
+}
+
+.compMap{
+	width: 100%;
+	height: 400px;
+	text-align: center;
+	
+}
+
+.compMap img{
+	border: 1px solid #f95307;
+}
+
+.marginTop{
+	margin-top: 30px;
+}
+
+.services_aboutUs{
+	height: auto;
+	width: 100%;
+}
+
+
+
+/*
+	<- About us
+*/
+
+
+.services_list_info h3{
+	border-bottom: 2px solid black
+}
+
+.services_list_info{
+	font-size: 13px;
+}
+
+.services_list_info img{
+	width: 100%;
+	height: 450px;
+	border: 1px solid #f95307;
+	margin-bottom: 20px;
+}
+
+/*
+	Portfolio
+*/
+
+.portfolio{
+	background-color: white;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	background-size: 2500px;
+	background-image: url("../img/supercrop_bg_2.svg");
+	background-repeat: no-repeat;
+}
+
+.portfolio-recent-events{
+	font-size: 20px;
+}
+
+.commitments{
+	background-color: #f8f8fa;
+	padding-bottom: 50px;
+	padding-top: 50px;
+	text-align: center;
+	color:black;
+}
+
+.caption{
+	text-decoration: none;
+	color: black;
+	font-size: 12px;
+}
+
+.captionV2{
+	text-decoration: none;
+	color: white;
+	font-size: 12px;
+}
+
+/*
+	Partners
+*/
+
+.partners-section{
+	display: block;
+	height: auto;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.partners{
+	padding-left: 30px;
+}
+
+.partners a{
+	text-decoration: none;
+	color: #f95307;
+}
+
+.services{
+	width: 70%;
+	color: #f95307;
+}
+
+.services tr td{
+	padding: 10px;
+}
+
+.partners_info{
+	padding-top: 20px;
+	color:#595959;
+	margin-bottom: 20px;
+	height: 400px;
+}
+
+.partnersName{
+	border-left: 3px solid #f95307;
+	padding-left: 5px;
+}
+
+.partnersInfo{
+	font-size: 15px;
+}
+
+.partnersInfos{
+	width: 100%;
+}
+
+.partnersContact{
+	font-size: 12px;
+}
+
+/*
+		Registration
+*/
+
+
+
+
+/*
+		Footer
+*/
+
+.cmPrms{
+	border-bottom: 2px solid white;
+}
+
+.cmPrms_about_us{
+	border-bottom: 2px solid black;
+}
+
+.site-footer{
+	margin-top: 0;
+	background-color: #282C35;
+	color:white;
+	height: auto;
+	padding-top: 20px;
+}
+
+.footer-branding{
+	font-family: pacifico;
+	color:#f95307;
+}
+.cmContact{
+	padding-top: 5px;
+	font-size: 12px;
+}
+
+.plnEvents ul{
+	list-style-type: none;
+}
+
+.plnEvents h3{
+	font-size: 14px;
+}
+
+.plnEvents ul a{
+	font-size: 12px;
+	color:white;
+	text-decoration: none;
+}
+
+.contactOn{
+	font-size: 12px;
+}
+
+.contactOn ul{
+	list-style-type: none;
+}
+
+.contactOn h3{
+	font-size: 14px;
+}
+
+.contactOn ul a{
+	font-size: 12px;
+	color:white;
+	text-decoration: none;
+}
+
+.devInfo{
+	font-size: 12px;
+	text-align: center;
+	color:white;
+	height: 30px;
+	background-color: #666A73;
+	margin-bottom: 0;
+}
+
+.devInfo_aboutUs{
+	font-size: 12px;
+	text-align: center;
+	color:white;
+	height: 30px;
+	background-color: #282C35;
+	margin-bottom: 0;
+}
+
+@media screen and (max-width: 740px){
+	.footer-branding{
+		font-size: 30px;
+	}
+	.cmPrms, .cmContact{
+		font-size: 12px;
+	}
+	.cmPrms_about_us{
+		font-size: 12px;
+	}
+}
+
+/*
+	Client Login page 
+*/
+
+.client-login-form{
+	height: 400px;
+	display: block;
+	background-size: 1500px;
+	background-image: url("../img/supercrop_bg_1.svg");
+	background-repeat: no-repeat;
+	padding-top: 50px;
+}
+
+.loginForm{
+	width: 100%;
+}
+
+.formHeader{
+	height: 20%;
+	background-color: #282C35;
+	color: #f95307;
+	padding: 15px;
+	text-align: center;
+	font-size: 20px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+.formBody{
+	padding: 10px 30px;
+	background-color: #282C35;
+}
+
+.formFooter{
+	height: 20%;
+	padding: 10px;
+	background-color: #282C35;
+	text-align: center;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.formFooter a{
+	text-decoration: none;
+	color:#f95307;
+}
+
+.btnClientLogin, .btnSendClientEmail, .btnChangeMyPassword{
+	background-color: #f95307;
+	border: 1px solid #f95307;
+	width: 30%;
+	cursor: pointer;
+	color:white;
+}
+
+.loginMsg, .recMsg, .venueNotes{
+	color: #f95307;
+}
+
+.client-registration-form{
+	height: auto;
+	display: block;
+	background-size: 1500px;
+	background-image: url("../img/supercrop_bg_1.svg");
+	background-repeat: no-repeat;
+	padding-top: 50px;
+}
+
+.regFormHeader{
+	width: 100%;
+	height: 20%;
+	background-color: #282C35;
+	color:#f95307;
+	padding: 10px;
+	text-align: center;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+.regFormBody{
+	background-color: #282C35;
+	color:white;
+	/*#f95307*/
+	padding: 20px;
+	margin-bottom: 20px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.inquiry{
+	width: 100%;
+	height: 100px;
+	resize: none;
+}
+
+.btnSendInquiry,.btnEmailRegister, .btnInsertClientInfo{
+	background-color: #f95307;
+	color:white;
+	padding: 10px 20px;
+}
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../img/load.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
+}
+
+.clientDashboard, .eventPayment{
+	height: auto;
+	display: block;
+	background-size: 2500px;
+	background-image: url("../img/supercrop_bg_1.svg");
+	background-repeat: no-repeat;
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+
+.eventPlanerTabs, .eventStatus, .recentEventsList{
+	background-color: #282C35;
+	color:white;
+	/*#f95307*/
+	padding: 20px;
+	margin-bottom: 10px;
+	border-radius: 20px;
+}
+
+.btnGotoMaterials, .btnGotoFoodsNEntertainment, .btnGotoMenus{
+	background-color: #f95307;
+	border: 1px solid #f95307;
+	width: 30%;
+	cursor: pointer;
+	color:white;
+}
+
+.nav-tabs li{
+	background-color: none;
+}
+
+.nav-tabs li.active{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.nav-tabs li a{
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	color:white;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.tab-content div{
+	background-color: inherit;
+}
+
+.materialsTb tr th{
+	text-align: center;
+}
+
+.menuSetTb{
+	width: 100%
+	margin: 10px;
+}
+
+.nextPrevBtns{
+	margin:0;
+}
+
+.calView{
+	width: 90%;
+	margin: auto;
+	margin-top: 20px;
+	height: auto;
+}
+
+.monthViewTb{
+	width: 100%;
+}
+
+.monthViewTb tr td{
+	padding: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	widows: 10%;
+}
+
+.monthViewTb tr th{
+	font-size: 17px;
+}
+
+.dayActive{
+	border: 1px solid #f95307;
+}
+
+.selecteDate{
+	border: 1px solid gray;
+	color: gray;
+}
+
+.legends{
+	border-top: 1px solid white;
+	width: 90%;
+	padding-top: 20px;
+	margin: auto;
+	margin-top: 40px;
+}
+.unavailable{
+	width: 20px;
+	height: 20px;
+	background-color: gray;
+}
+
+.available{
+	width: 20px;
+	height: 20px;
+	background-color: white;
+}
+
+.MonthNowLabel{
+	width: 90%;
+	margin: auto;
+	height: auto;
+	border-bottom: 1px solid white;
+}
+
+.clientEventsTb{
+	width: 70%;
+}
+
+.eventMaterials, .eventFoodsEntertainments, .menu{
+	margin-top: 40px;
+	padding: 20px;
+	border-top: 2px solid white;
+}
+
+.eventSelectedMenu{
+	width: 60%;
+}
+
+.dashboardTitle{
+	width: 100%;
+	text-align: center;
+}
+
+.updateBtn{
+	width: 100%;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.btnUpdateEventDetails:hover,
+.btnUpdateEventMaterials:hover,
+.btnUpdateEventFoodsEntertainment:hover,
+.btnUpdateEventMenu:hover{
+	cursor: pointer;
+}
+
+.eventDetailInfo{
+	margin-top: 40px;
+	font-size: 14px;
+	color: #2b2b2d;
+}
+.commentSection{
+	margin-top: 40px;
+}
+
+.recentEventsTb{
+	font-size: 12px;
+}
+
+.paymentTb{
+	margin-top: 20px;
+	width: 50%;
+}
+.paymentBtns{
+	width: 30%;
+	text-align: center;
+}
+.btnCashOnPersonalMeeting{
+	padding: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#phpCurCode{
+	text-align:right; width: 30px;
+}
+
+#reservationFee, #materialsTotal, #foodsEnterTotal, 
+#menuFeeTotal, #totalComputation, #totalBalance, #downOrFullPaymentTotal, #addionalHrFee{
+	text-align:right; 
+	width: 50px;
+}
+
+.cancelEvent{
+	width: 100%;
+	text-align: center;
+}
+.emailRecMsg, .selectDateMsg{
+	color: #f95307;
+}
+
+.venueAddress{
+	display: none;
+}

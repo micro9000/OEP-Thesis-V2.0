@@ -1,0 +1,8 @@
+[05-Dec-2017 18:06:07 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/onebuffetadmin/public_html/admin/model/database/Admin_Connection.php on line 17
+[05-Dec-2017 18:08:38 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/onebuffetadmin/public_html/admin/model/database/Admin_Connection.php on line 17
+[05-Dec-2017 18:15:16 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/onebuffetadmin/public_html/admin/model/database/Admin_Connection.php on line 17
+[05-Dec-2017 18:16:27 UTC] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/onebuffetadmin/public_html/admin/model/database/Admin_Connection.php on line 17
+[05-Dec-2017 23:52:15 UTC] PHP Notice:  Undefined index: user_type in /home/onebuffetadmin/public_html/admin/navbar.php on line 18
+[05-Dec-2017 23:52:15 UTC] PHP Notice:  Undefined index: user_type in /home/onebuffetadmin/public_html/admin/navbar.php on line 24
+[06-Dec-2017 03:42:42 UTC] PHP Notice:  Undefined index: user_type in /home/onebuffetadmin/public_html/admin/navbar.php on line 18
+[06-Dec-2017 03:42:42 UTC] PHP Notice:  Undefined index: user_type in /home/onebuffetadmin/public_html/admin/navbar.php on line 24
