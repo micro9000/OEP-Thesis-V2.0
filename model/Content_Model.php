@@ -2186,6 +2186,92 @@
 
 			return $count;
 		}
+
+		public function updateUserFullName($newFullname, $curPass){
+
+			if (! $this->conn->connect_error){
+
+				$newFullname = $this->sanitizeInput($newFullname);
+				$curPass = $this->sanitizeInput($curPass);
+				$userID = $_SESSION['client_ID'];
+
+				$hashPass = hash('sha512', $curPass);
+
+				$query = "UPDATE RegisteredClient SET fullName='". $newFullname ."' WHERE clientPass='". $hashPass ."' AND id=" . $userID;
+
+				if ($this->conn->query($query) === TRUE){
+					$_SESSION['client_FullName'] = $newFullname;
+                    return $this->conn->affected_rows;
+                }
+
+                return 0;
+			}
+		}
+
+
+		public function updateUserContactNo($newContactNo, $curPass){
+
+			if (! $this->conn->connect_error){
+
+				$newContactNo = $this->sanitizeInput($newContactNo);
+				$curPass = $this->sanitizeInput($curPass);
+				$userID = $_SESSION['client_ID'];
+
+				$hashPass = hash('sha512', $curPass);
+
+				$query = "UPDATE RegisteredClient SET contactNo='". $newContactNo ."' WHERE clientPass='". $hashPass ."' AND id=" . $userID;
+
+				if ($this->conn->query($query) === TRUE){
+                    return $this->conn->affected_rows;
+                }
+
+                return 0;
+			}
+		}
+
+		public function updateClientPasswordV2($newPassword, $curPass){
+
+			if (! $this->conn->connect_error){
+
+				$newPassword = $this->sanitizeInput($newPassword);
+				$curPass = $this->sanitizeInput($curPass);
+				$clientID = $_SESSION['client_ID'];
+
+				$newPasswordHash = hash('sha512', $newPassword);
+				$curPassHash = hash('sha512', $curPass);
+
+				$query = "UPDATE RegisteredClient SET clientPass='". $newPasswordHash ."' WHERE clientPass='". $curPassHash ."' AND id=". $clientID;
+
+				if ($this->conn->query($query) === TRUE){
+                    return true;
+                }
+			}
+
+			return false;
+		}
+
+		public function updateClientEmailAddress($newEmail, $curPass){
+
+			if (! $this->conn->connect_error){
+
+				$newEmail = $this->sanitizeInput($newEmail);
+				$curPass = $this->sanitizeInput($curPass);
+
+				$clientTag = $this->getClientTag($newEmail);
+
+				$clientID = $_SESSION['client_ID'];
+
+				$curPassHash = hash('sha512', $curPass);
+
+				$query = "UPDATE RegisteredClient SET email='". $newEmail ."', uniqueTag='". $clientTag ."' WHERE clientPass='". $curPassHash ."' AND id=". $clientID;
+
+				if ($this->conn->query($query) === TRUE){
+                    return true;
+                }
+			}
+
+			return false;
+		}
 	}
 
 ?>

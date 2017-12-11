@@ -42,7 +42,7 @@
 									<li><a href="clientDashboard.php">HOME</a></li>
 									<li><a href="clientEventStatus.php">EVENT STATUS</a></li>
 									<li><a href="clientRecentEvents.php">RECENT EVENTS</a></li>
-									<li><a href="#.php">SETTINGS</a></li>
+									<li><a href="clientSettings.php">SETTINGS</a></li>
 									<li><a href="clientLogout.php">LOGOUT</a></li>
 								</ul>
 							</nav>
