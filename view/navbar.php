@@ -20,7 +20,7 @@
 									<li><a href="portfolio.php">PORTFOLIO</a></li>
 									<li><a href="services.php">SERVICES</a></li>
 									<li><a href="clientRegistration.php">REGISTER</a></li>
-									<li><a href="contact.php">CONTACT</a></li>
+									<li><a href="contact.php">INQUIRY</a></li>
 									<li><a href="clientLogin.php">LOGIN</a></li>
 								</ul>
 							</nav>

@@ -2140,11 +2140,11 @@
 				$query = "UPDATE Clients_RecoveredEmail SET isDone=1 WHERE id=". $id ." AND email_address='". $clientEmail ."' AND tag='". $tag ."' AND clientID=". $clientID;
 
 				if ($this->conn->query($query) === TRUE){
-                    return true;
+                    return $this->conn->affected_rows;
                 }
 			}
 
-			return false;
+			return 0;
 		}
 
 		public function isSelectedDatesValid($start, $end){
@@ -2243,11 +2243,11 @@
 				$query = "UPDATE RegisteredClient SET clientPass='". $newPasswordHash ."' WHERE clientPass='". $curPassHash ."' AND id=". $clientID;
 
 				if ($this->conn->query($query) === TRUE){
-                    return true;
+                    return $this->conn->affected_rows;
                 }
 			}
 
-			return false;
+			return 0;
 		}
 
 		public function updateClientEmailAddress($newEmail, $curPass){
@@ -2266,11 +2266,11 @@
 				$query = "UPDATE RegisteredClient SET email='". $newEmail ."', uniqueTag='". $clientTag ."' WHERE clientPass='". $curPassHash ."' AND id=". $clientID;
 
 				if ($this->conn->query($query) === TRUE){
-                    return true;
+                    return $this->conn->affected_rows;
                 }
 			}
 
-			return false;
+			return 0;
 		}
 	}
 

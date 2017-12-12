@@ -26,7 +26,7 @@
 
 					$rowsAffect = $contentModel->updateClients_RecoveredEmail_toDone($clientInfo[0]['id'], $tag, $clientInfo[0]['clientID'], $email);
 
-					if ($rowsAffect === true){
+					if ($rowsAffect > 0){
 						$results = array("done" => "TRUE", "msg" => "Password Changed! Please login");
 					}
 				}

@@ -73,22 +73,27 @@ $(".btnUpdateFullName").on("click", function(){
 	var clientFullNameCurPass = $(".clientFullNameCurPass").val();
 
 	if (clientFullName !== "" && clientFullNameCurPass !== ""){
-		$.post(
-			"../controller/updateClientInfo_handler.php",
-			{
-				"task" : "updateFullname",
-				"newFullName" : clientFullName,
-				"curPass" : clientFullNameCurPass
-			},
-			function(data){
-				var dataObj = JSON.parse(data);
 
-				if (dataObj.done === "TRUE"){
+		if (allLetter(clientFullName) === false){
+			$(".fullNameErr").html("Invalid Full name - at least 2 to 3 word name start with uppercase letter ex: Johnny Depp or Kyrie Andrew Irving");
+		}else{
+			$.post(
+				"../controller/updateClientInfo_handler.php",
+				{
+					"task" : "updateFullname",
+					"newFullName" : clientFullName,
+					"curPass" : clientFullNameCurPass
+				},
+				function(data){
+					var dataObj = JSON.parse(data);
+
+					if (dataObj.done === "TRUE"){
+						window.location.reload();
+					}
 					$(".fullNameErr").html(dataObj.msg);
-					window.location.reload();
 				}
-			}
-		);
+			);
+		}
 	}
 });
 
@@ -97,22 +102,29 @@ $(".btnUpdateContactNo").on("click", function(){
 	var clientContactNoCurPass = $(".clientContactNoCurPass").val();
 
 	if (clientContactNo !== "" && clientContactNoCurPass !== ""){
-		$.post(
-			"../controller/updateClientInfo_handler.php",
-			{
-				"task" : "updateContactNo",
-				"newContactNo" : clientContactNo,
-				"curPass" : clientContactNoCurPass
-			},
-			function(data){
-				var dataObj = JSON.parse(data);
 
-				if (dataObj.done === "TRUE"){
+		if (mobileNum(clientContactNo) === true){
+			$.post(
+				"../controller/updateClientInfo_handler.php",
+				{
+					"task" : "updateContactNo",
+					"newContactNo" : clientContactNo,
+					"curPass" : clientContactNoCurPass
+				},
+				function(data){
+					var dataObj = JSON.parse(data);
+
+					if (dataObj.done === "TRUE"){
+						window.location.reload();
+					}
+
 					$(".contactNoErr").html(dataObj.msg);
-					window.location.reload();
 				}
-			}
-		);
+			);
+		}else{
+			$(".contactNoErr").html("Invalid Contact No, please follow this format (+63 or 0 + ten numbers)");
+		}
+
 	}
 });
 
@@ -126,24 +138,31 @@ $(".btnUpdatePassword").on("click", function(){
 		if (clientNewPassword === clientNewPasswordConfirm){
 			$(".clientNewPasswordConfirmErr").html("");
 
-			$.post(
-				"../controller/updateClientInfo_handler.php",
-				{
-					"task" : "updateClientPassword",
-					"newPass" : clientNewPassword,
-					"conNewPass" : clientNewPasswordConfirm,
-					"curPass" : clientPassCurPass
-				},
-				function(data){
-					// console.log(data);
-					var dataObj = JSON.parse(data);
+			var strength = passwordStrength(clientNewPassword);
 
-					if (dataObj.done === "TRUE"){
+			if (strength[0] === 3 || strength[0] === 4){
+				$.post(
+					"../controller/updateClientInfo_handler.php",
+					{
+						"task" : "updateClientPassword",
+						"newPass" : clientNewPassword,
+						"conNewPass" : clientNewPasswordConfirm,
+						"curPass" : clientPassCurPass
+					},
+					function(data){
+						// console.log(data);
+						var dataObj = JSON.parse(data);
+
+						if (dataObj.done === "TRUE"){
+							window.location.reload();
+						}
+
 						$(".clientNewPasswordConfirmErr").html(dataObj.msg);
-						window.location.reload();
 					}
-				}
-			);
+				);
+			}else{
+				$(".clientNewPasswordConfirmErr").html(strength[1]);
+			}
 
 		}else{
 			$(".clientNewPasswordConfirmErr").html("Password doesn't match");
@@ -171,13 +190,14 @@ $(".btnUpdateEmailAdd").on("click", function(){
 					var dataObj = JSON.parse(data);
 
 					if (dataObj.done === "TRUE"){
-						$(".emailErr").html(dataObj.msg);
 						window.location.reload();
 					}
+					$(".emailErr").html(dataObj.msg);
 				}
 			);
-
-		}
+		}else{
+              $(".emailErr").html("Invalid email address");
+        }
 	}
 
 });
